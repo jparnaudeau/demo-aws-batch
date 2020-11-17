@@ -1,0 +1,32 @@
+{
+  "command": [],
+  "environment": [
+    {
+      "name": "environment",
+      "value": "${ENV}"
+    },
+    {
+      "name": "AWS_DEFAUT_REGION",
+      "value": "${REGION}"
+    },
+    {
+      "name": "BUCKET_NAME",
+      "value": "${BUCKET_NAME}"
+    }
+  ],
+  "image": "${BATCH_IMAGE}",
+  "jobRoleArn": "${JOB_ROLE_ARN}",
+  "executionRoleArn": "${EXECUTION_ROLE_ARN}",
+  "vcpus": ${BATCH_VCPUS},
+  "memory": ${BATCH_MEMORY},
+  "privileged": true,
+  "mountPoints": [],
+  "volumes": [],
+  "ulimits": [],
+  "retryStrategy": {
+    "attempts": 2
+  },
+  "timeout": {
+    "attemptDurationSeconds": 180
+  }
+}
